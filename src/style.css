@@ -1,5 +1,25 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
-body{
-    background: white;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.wrapper {
+  min-height: 100vh;              
+  display: flex;
+  flex-direction: column;
+  justify-content: center;        
+  align-items: center;            
+}
+
+#excuse {
+  font-size: 2rem;
+  text-align: center;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
