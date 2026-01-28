@@ -12,20 +12,22 @@ window.onload = function () {
   let what = ['my homework', 'my phone', 'the car'];
   let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
 
-  let randWho = Math.floor(Math.random()*who.length);
-  let randAction = Math.floor(Math.random()*action.length);
-  let randWhat = Math.floor(Math.random()*what.length);
-  let randwhen = Math.floor(Math.random()*when.length);
-  
-  let newexcuse = who[randWho] + ' ' + action[randAction] + ' ' + what[randWhat] + ' ' + when[randwhen];
-  console.log (newexcuse)
-
-  let bariable = document.getElementById('excuse');
+  let excuse = document.getElementById('excuse');
   let button = document.getElementById("generate");
 
-  bariable.innerHTML = newexcuse
+  function generateExcuse() {
+
+    let randWho = Math.floor(Math.random()*who.length);
+    let randAction = Math.floor(Math.random()*action.length);
+    let randWhat = Math.floor(Math.random()*what.length);
+    let randwhen = Math.floor(Math.random()*when.length);
+
+    return who[randWho] + ' ' + action[randAction] + ' ' + what[randWhat] + ' ' + when[randwhen];
+  }
+
+  excuse.innerHTML = generateExcuse()
 
   button.addEventListener("click", () => {
-    bariable.innerHTML = newexcuse();
+    excuse.innerHTML = generateExcuse();
   });
 };
